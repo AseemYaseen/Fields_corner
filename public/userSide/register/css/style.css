@@ -15,6 +15,15 @@ body {
   font-size: 13px;
   margin: 0; }
 
+  .inner {
+    margin-top: 14rem !important;
+      margin-left: 40rem !important;
+    padding: 20px;
+    background: #fff;
+    max-width: 850px;
+    display: flex;
+  }
+
 input, textarea, select, button {
   font-family: "Poppins-Regular";
   color: #333;
