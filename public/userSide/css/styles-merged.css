@@ -2022,9 +2022,9 @@ pre code {
 }
 
 .row {
-    margin-top: -4rem;
+    margin-top: 1rem;
     margin-right: -15px;
-    margin-left: -15px
+    margin-left: -15px;
 }
 
 .col-lg-1,
