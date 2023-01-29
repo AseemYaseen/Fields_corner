@@ -8,7 +8,7 @@ use App\Http\Controllers\Admin\PlaygroundsController;
 use App\Http\Controllers\Admin\ReservationsController;
 use App\Http\Controllers\UserSide\MasterController;
 use App\Http\Controllers\UserSide\categoryController;
-use App\Http\Controllers\UserSide\reservationController;
+use App\Http\Controllers\UserSide\reservatioonController;
 use App\Http\Controllers\UserSide\registerController;
 use App\Http\Controllers\UserSide\loginController;
 use App\Http\Controllers\UserSide\searchController;
@@ -68,9 +68,9 @@ require __DIR__.'/auth.php';
 
 Route::get('/',[MasterController::class,'index'])->name('puplicUser.welcome');
 Route::get('/fields',[categoryController::class,'index'])->name('puplicUser.fields');
-Route::get('/reservation',[reservationController::class,'index'])->name('puplicUser.reservation');
-Route::get('/register',[registerController::class,'index'])->name('puplicUser.register');
-Route::get('/login',[loginController::class,'index'])->name('puplicUser.login');
+Route::get('/reservatioon',[reservatioonController::class,'index'])->name('puplicUser.reservation');
+// Route::get('/register',[registerController::class,'index'])->name('puplicUser.register');
+// Route::get('/login',[loginController::class,'index'])->name('puplicUser.login');
 
 
 Route::get('/about', function () {

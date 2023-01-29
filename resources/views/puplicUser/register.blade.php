@@ -1,4 +1,4 @@
-@extends('puplicUser.layout.master')
+@extends('../puplicUser.layout.master')
 @section('title')
 Register
 @endsection
@@ -7,7 +7,7 @@ Register
 <link rel="stylesheet" href="userSide/register/css/style.css">
 @endsection
 
-{{--============= showCase ===============--}}
+{{--============= showCase ===============--}}Q
 @section('showCase')
 
 @endsection
@@ -18,15 +18,18 @@ Register
         <div class="image-holder">
             <img src="img/img_13.jpg" alt="" style="height: 100%">
         </div>
-        <form action="">
+        <form  action="{{ route('register') }}" method="post">-
+
             <h3>Registration </h3>
-            <div class="form-wrapper">
-                <input type="text" placeholder="Full Name" class="form-control">
-                {{-- <i class="zmdi zmdi-account"></i> --}}
+            <div>
+                <x-input-label for="name" :value="__('Name')" />
+                <x-text-input id="name" class="form-control" type="text" name="name" :value="old('name')" required autofocus />
+                <x-input-error :messages="$errors->get('name')" class="mt-2" />
             </div>
-            <div class="form-wrapper">
-                <input type="text" placeholder="Email Address" class="form-control">
-                <i class="zmdi zmdi-email"></i>
+            <div class="mt-4">
+                <x-input-label for="email" :value="__('Email')" />
+                <x-text-input id="email" class="form-control" type="email" name="email" :value="old('email')" required />
+                <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
             <div class="form-wrapper">
                 <input type="password" placeholder="Password" class="form-control">
