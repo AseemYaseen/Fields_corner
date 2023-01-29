@@ -1,9 +1,9 @@
 @extends('puplicUser.layout.master')
 @section('contact')
-   
+
 @endsection
 @section('css')
-    
+
 @endsection
 
 
@@ -32,7 +32,7 @@
         </li>
     </ul>
 </section>
-  
+
   <section class="probootstrap-section">
     <div class="container">
       <div class="row probootstrap-gutter60">
@@ -77,31 +77,11 @@
             <li><i class="icon-mail"></i><span>info@fieldsCorner.com</span></li>
             <li><i class="icon-phone2"></i><span>+962 03247814<span></li>
           </ul>
-          <h2>Feedback</h2>
-          <p>At fields corner Stadium we welcome your feedback at all times. Your comments and suggestions are greatly appreciated and help us to continually improve our operation. All comments received will be treated in confidence as per our. </p>
-          
         </div>
       </div>
     </div>
   </section>
 
-  <section class="probootstrap-half">
-    <div class="image" style="background-image: url(img/slider_2.jpg);"></div>
-    <div class="text">
-      <div class="probootstrap-animate fadeInUp probootstrap-animated">
-        <h2 class="mt0">Best 5 Star hotel</h2>
-        <p><img src="img/curve_white.svg" class="seperator" alt="Free HTML5 Bootstrap Template"></p>
-        <div class="row">
-          <div class="col-md-6">
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>    
-          </div>
-          <div class="col-md-6">
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>    
-          </div>
-        </div>
-        <p><a href="#" class="link-with-icon white">Learn More <i class=" icon-chevron-right"></i></a></p>
-      </div>
-    </div>
-  </section>
+
 @endsection
 
