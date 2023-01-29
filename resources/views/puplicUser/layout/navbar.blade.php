@@ -30,9 +30,9 @@
      </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
     <li><a class="dropdown-item" href="{{ url('/UserProfile') }}"><i class="fa fa-user"></i> Profile</a></li>
-    <li><a class="dropdown-item" href="{{ route('puplicUser.register') }}"><i class="fa fa-user-plus"></i></i> Register</a></li>
-    <li><a class="dropdown-item" href="{{ route('puplicUser.login') }}"><i class="fa fa-sign-in"></i> Login</a></li>
-    <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+    <li><a class="dropdown-item" href="{{ route('register') }}"><i class="fa fa-user-plus"></i></i> Register</a></li>
+    <li><a class="dropdown-item" href="{{ route('login') }}"><i class="fa fa-sign-in"></i> Login</a></li>
+    <li><a href=" {{route('logout')}}"> <button type="button" class="btn btn-block btn-outline-danger btn-sm">Logout</button></a></li>
     </ul>
   </div>
   

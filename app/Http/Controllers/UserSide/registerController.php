@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\UserSide;
 use App\Http\Controllers\Controller;
 
