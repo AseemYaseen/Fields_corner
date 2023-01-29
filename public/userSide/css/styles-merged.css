@@ -289,7 +289,7 @@ th {
         page-break-after: avoid
     }
 
-   
+
     .btn>.caret,
     .dropup>.btn>.caret {
         border-top-color: #000 !important
@@ -2022,6 +2022,7 @@ pre code {
 }
 
 .row {
+    margin-top: -4rem;
     margin-right: -15px;
     margin-left: -15px
 }
