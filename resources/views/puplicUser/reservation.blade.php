@@ -61,7 +61,7 @@
                 <input type="email" class="form-control" id="email" name="email">
               </div>
             </div>
-            <div class="form-group">
+            {{-- <div class="form-group">
               <label for="room">Fields</label>
               <div class="form-field">
                 <i class="icon icon-chevron-down"></i>
@@ -72,7 +72,7 @@
                   <option value="3">3</option>
                 </select>
               </div>
-            </div>
+            </div> --}}
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
@@ -114,7 +114,7 @@
                   </div>
                 </div>
               </div> --}}
-              <div class="col-md-6">
+              {{-- <div class="col-md-6">
                 <div class="form-group">
                   <label for="children">Numbers</label>
                   <div class="form-field">
@@ -129,7 +129,7 @@
                   </div>
                   
                 </div>
-              </div>
+              </div> --}}
             </div>
             <div class="form-group">
               <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Reserve">
