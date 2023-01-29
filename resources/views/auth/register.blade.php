@@ -1,18 +1,36 @@
-<x-guest-layout>
+@extends('../puplicUser.layout.master')
+@section('title')
+Register
+@endsection
+@section('css')
+<link rel="stylesheet" href="userSide/register/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="userSide/register/css/style.css">
+@endsection
+{{--============= showCase ===============--}}
+@section('showCase')
+
+@endsection
+{{--============= contant ===============--}}
+@section('contant')
+<div class="wrapper" style="background-image: url('img/img_9.jpg'); ">
+    <div class="inner " style="width: 700px !important">
+        <div class="image-holder">
+            <img src="img/img_13.jpg" alt="" style="height: 100%">
+        </div>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+            <x-text-input id="name" class="form-control" type="text" name="name" :value="old('name')" required autofocus />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+            <x-text-input id="email" class="form-control" type="email" name="email" :value="old('email')" required />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
@@ -20,7 +38,7 @@
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
+            <x-text-input id="password" class="form-control"
                             type="password"
                             name="password"
                             required autocomplete="new-password" />
@@ -32,7 +50,7 @@
         <div class="mt-4">
             <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
 
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
+            <x-text-input id="password_confirmation" class="form-control"
                             type="password"
                             name="password_confirmation" required />
 
@@ -49,4 +67,11 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+                <i class="zmdi zmdi-arrow-right"></i>
+            </button>
+        </form>
+    </div>
+</div>
+@endsection
+
+

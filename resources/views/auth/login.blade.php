@@ -1,27 +1,45 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+@extends('puplicUser.layout.master')
+@section('title')
+login
+@endsection
+@section('css')
+<link rel="stylesheet" href="userSide/register/css/style.css">
+<link rel="stylesheet" href="userSide/register/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+@endsection
 
+
+{{--============= showCase ===============--}}
+@section('showCase')
+
+@endsection
+
+{{--============= contant ===============--}}
+@section('contant')
+<div class="wrapper" style="background-image: url('img/img_9.jpg'); ">
+    <div class="inner " style="width: 700px !important">
+        <div class="image-holder">
+            <img src="img/img_10.jpg" alt="" style="height: 100%">
+        </div>
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            <x-text-input id="email" class="" type="email" name="email" :value="old('email')" required autofocus />
+            <x-input-error :messages="$errors->get('email')" class="form-control" />
         </div>
 
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
+            <x-text-input id="password" class=""
                             type="password"
                             name="password"
                             required autocomplete="current-password" />
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+            <x-input-error :messages="$errors->get('password')" class="form-control" />
         </div>
 
         <!-- Remember Me -->
@@ -42,6 +60,8 @@
             <x-primary-button class="ml-3">
                 {{ __('Log in') }}
             </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+        </form>
+    </div>
+</div>
+@endsection
+

@@ -23,7 +23,7 @@
               <div class="col-md-10 col-md-offset-1">
                 <div class="probootstrap-slider-text text-center">
                   <h1 class="probootstrap-heading probootstrap-animate">Welcome to fields corner</h1>
-                  <div class="probootstrap-animate probootstrap-sub-wrap">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</div>
+                  <div class="probootstrap-animate probootstrap-sub-wrap">Enjoy The Only Golf Field In The Kingdom</div>
                   <br>
                   <br>
                   <div class="box">
@@ -43,7 +43,7 @@
               <div class="col-md-10 col-md-offset-1">
                 <div class="probootstrap-slider-text text-center">
                   <h1 class="probootstrap-heading probootstrap-animate">Enjoy Luxury Experience</h1>
-                  <div class="probootstrap-animate probootstrap-sub-wrap">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</div>
+                  <div class="probootstrap-animate probootstrap-sub-wrap">Let's Enjoy Football Through The Best Sports Facilities That Meet The Highest Standards Of Quality, Protection, And Safety</div>
                   <br>
                   <br>
                   <div class="box">
@@ -65,7 +65,7 @@
                   <div class="probootstrap-slider-text text-center">
                     {{-- <p><img src="img/curve_white.svg" class="seperator probootstrap-animate" alt="Free HTML5 Bootstrap Template"></p> --}}
                     <h1 class="probootstrap-heading probootstrap-animate">Enjoy Luxury Experience</h1>
-                    <div class="probootstrap-animate probootstrap-sub-wrap">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</div>
+                    <div class="probootstrap-animate probootstrap-sub-wrap">Where To Experience Swimming In The Aqaba</div>
                     <br>
                     <br>
                     <div class="box">
@@ -183,7 +183,7 @@
     <div class="col-md-4">
       <div class="service left-icon probootstrap-animate">
         <div class="icon">
-          <img style="height: 50px !important; width: 50px !important;" src="img/img_9.png" class="svg" alt="Free HTML5 Bootstrap Template by uicookies.com">
+          <img style="height: 50px !important; width: 50px !important;" src="img/img_19.png" class="svg" alt="Free HTML5 Bootstrap Template by uicookies.com">
         </div>
         <div class="text">
           <h3>One place to book </h3>
