@@ -74,7 +74,7 @@ about
 
 <section class="probootstrap-section probootstrap-section-dark">
     <div class="container">
-      <div class="row">
+      <div class="row" style="margin-top: 15rem">
         <div class="col-md-12 text-center">
           <h2 class="mt0">Why Choose Us?</h2>
           <br>

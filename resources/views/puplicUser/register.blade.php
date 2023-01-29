@@ -13,7 +13,7 @@ Register
 @endsection
 {{--============= contant ===============--}}
 @section('contant')
-<div class="wrapper" style="background-image: url('img/img_9.jpg'); ">
+<div class="wrapper" style="background-image: url('img/img_17.jpg');">
     <div class="inner " style="width: 700px !important">
         <div class="image-holder">
             <img src="img/img_13.jpg" alt="" style="height: 100%">
