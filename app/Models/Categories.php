@@ -21,7 +21,7 @@ class Categories extends Model
     ];
 
     public function Playgrounds(){
-        return $this->hasMany(Playgrounds::class);
+        return $this->hasOne(Playgrounds::class);
     }
 
 }

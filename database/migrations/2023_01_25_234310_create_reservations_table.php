@@ -20,9 +20,9 @@ return new class extends Migration
             $table->integer('phone_number');
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('playground_id')->references('id')->on('playgrounds')->onDelete('cascade');
-            $table->string('status');
-            $table->datetime('date');
-            $table->integer('number_hours');
+            $table->integer('Status')->default(0);
+            $table->datetime('Start_date');
+            $table->datetime('End_date');
             $table->decimal('total_price');
             $table->timestamps();
         });

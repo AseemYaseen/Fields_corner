@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use  App\Models\Categories;
+use  App\Models\Reservations;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Playgrounds extends Model
 {
@@ -25,6 +27,12 @@ class Playgrounds extends Model
     ];
 
     public function Categories(){
-        return $this->belongsTo(Categories::class,'name');
+        return $this->belongsTo(Categories::class, 'category_id');
+    
+    }
+
+    public function Reservations(){
+        return $this->hasMany(Reservations::class);
+    
     }
 }

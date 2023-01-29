@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers\Admin;
-use App\Models\User;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class userController extends Controller
@@ -57,7 +57,7 @@ class userController extends Controller
      */
     public function edit($id)
     {
-        //
+       $Users = User::findorFail($id);
     }
 
     /**
@@ -69,7 +69,16 @@ class userController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $Users = User::findorFail($id);
+
+        if ($Users->is_admin == 0){
+            $Users->is_admin = 1;
+        }else{
+            $Users->is_admin = 0;
+        }
+        
+        $Users->save();
+        return redirect()->route('users.index');
     }
 
     /**
@@ -80,6 +89,8 @@ class userController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::destroy($id);
+        return redirect()->route('users.index');
+
     }
 }

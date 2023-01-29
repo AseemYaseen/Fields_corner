@@ -62,9 +62,12 @@ class PlaygroundsController extends Controller
      */
     public function show(Playgrounds $categories,$id)
     {
-        // $playgroundsDetails = Playgrounds::findorFail($id);
-        $playgroundsDetails= Playgrounds::findorFail($id);
+        $playgroundsDetails = Playgrounds::findorFail($id);
         $categories = Categories::findorFail($playgroundsDetails->category_id);
+
+        //    $playgroundsDetails = Playgrounds::with('Categories')->get();
+           
+
         // $categories = Categories::get();
         // $data = [];
         // foreach ($trips as $trip) {
@@ -94,6 +97,7 @@ class PlaygroundsController extends Controller
     {
         // $categories = Categories::all();
         $playgroundsEdit = Playgrounds::findorFail($id);
+        // $playgroundsEdit = Playgrounds::where();
         $playgroundsCat=Categories::all();
         // $playgroundsEdit 
         // $playgroundsCat= Playgrounds::with('Categories')->get();

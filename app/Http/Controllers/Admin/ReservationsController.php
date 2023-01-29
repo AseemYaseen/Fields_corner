@@ -15,6 +15,7 @@ class ReservationsController extends Controller
     public function index()
     {
         $reservations= Reservations::all();
+
         return view('Admin.reservation', compact('reservations'));
     }
 
@@ -25,7 +26,7 @@ class ReservationsController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -36,7 +37,7 @@ class ReservationsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -68,9 +69,19 @@ class ReservationsController extends Controller
      * @param  \App\Models\Reservations  $reservations
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reservations $reservations)
+    public function update(Request $request ,$id)
     {
-        //
+            $Statuss = Reservations::findorFail($id);
+
+            if ($Statuss->Status == 0){
+                $Statuss->Status = 1;
+            }else{
+                $Statuss->Status = 0;
+            }
+            $Statuss->save();
+            return redirect()->route('reservation.index');
+        
+    
     }
 
     /**
@@ -79,8 +90,10 @@ class ReservationsController extends Controller
      * @param  \App\Models\Reservations  $reservations
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reservations $reservations)
+    public function destroy(Reservations $reservations, $id)
     {
-        //
+        Reservations::destroy($id);
+        return redirect()->route('reservation.index');
+
     }
 }

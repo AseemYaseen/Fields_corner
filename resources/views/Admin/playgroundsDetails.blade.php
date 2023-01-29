@@ -4,7 +4,7 @@
 @endsection
 
 @section('TheHead')
-Categories Details
+Fields Details
 @endsection
 
 @section('css')
@@ -26,6 +26,7 @@ Categories Details
       <div class="row">
         <div class="col-12 col-sm-6">
           <div class="col-12">
+            {{-- {{dd($playgroundsDetails)}} --}}
             <img src="{{URL::asset("storage/image/$playgroundsDetails->image")}}" class="product-image" alt="Category image">
           </div>
           {{-- <div class="col-12 product-image-thumbs">
@@ -40,7 +41,8 @@ Categories Details
           <h3 class="my-3">{{$playgroundsDetails->name}}</h3>
           <hr>
           <div class="col-12 col-sm-6">
-            <h3 class="my-3">{{$playgroundsDetails->Category->name}}</h3>
+            {{-- {{dd($playgroundsDetails->Categories)}} --}}
+            <h3 class="my-3">{{$playgroundsDetails->Categories->name}}</h3>
             <hr>
 
           <div class="bg-gray py-2 px-3 mt-4">
