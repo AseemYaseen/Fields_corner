@@ -38,7 +38,6 @@ class CategoriesController extends Controller
         $categories = New Categories();
         $categories->name = $request->name;
         $categories->description = $request->description;
-
         $photoName = $request->file('image')->getClientOriginalName();
         $request->file('image')->storeAs('public/image', $photoName);
         $categories->image = $photoName;

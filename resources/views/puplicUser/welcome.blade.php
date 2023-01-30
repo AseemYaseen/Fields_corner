@@ -56,6 +56,7 @@
               </div>
             </div>
           </div>
+  
 
         </li>
         <li style="background-image: url(img/slider_3.jpg);" class="overlay">
@@ -94,20 +95,24 @@
             </ul>
           </div>
         </div>
+
+        
         <div class="row">
           <div class="col-md-12 probootstrap-relative">
             <div class="owl-carousel owl-carousel-carousel">
+              @foreach ($categories as $categorie)
               <div class="item">
                 <div class="probootstrap-room">
-                  <a href="#"><img src="img/img_6.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></a>
+                  {{-- <a href="{{route('fields.show',['field'=>$categorie['id']])}}"><img src="{{URL::asset("storage/image/$categorie->image")}}"style="width:400px; height:200px" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></a> --}}
+                      <a href="{{route('fields.show',$categorie->id)}}"><img src="{{URL::asset("storage/image/$categorie->image")}}"style="width:400px; height:200px" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></a>
                   <div class="text">
-                    <h3>Swimming Pools</h3>
+                    <h3>{{$categorie->name}}</h3>
                     <div class="post-meta">
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="item">
+              {{-- <div class="item">
                 <div class="probootstrap-room">
                   <a href="#"><img src="img/img_5.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></a>
                   <div class="text">
@@ -125,13 +130,14 @@
                     <div class="post-meta">
                     </div>
                   </div>
-                </div>
-              </div>
+                 </div> --}}
+                @endforeach
+              </div> 
             </div>
           </div>
         </div>
       </div>
-  </section>
+    </section>
 
   <section class="probootstrap-section probootstrap-section-dark">
     <div class="container">

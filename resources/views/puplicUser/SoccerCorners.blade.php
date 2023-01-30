@@ -32,17 +32,16 @@
       </li>
   </ul>
 </section>
+
 <section class="probootstrap-section">
   <div class="container">
     <div class="row">
-      @foreach($Playgrounds as $Playground)
-      
+
       <div class="col-md-4 col-sm-6 col-xs-12">
         <div class="probootstrap-room">
           <a href="#"><img src="img/swimming1.png" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></a>
           <div class="text">
-           {{-- {{dd($Playground)}}  --}}
-            <h3>{{$Playground->name}}</h3>
+            <h3>Prince Hamzah Club</h3>
             <p> Swimming pool <strong>$29.00/Hour</strong></p>
             <div class="post-meta mb30">
              
@@ -51,11 +50,19 @@
           </div>
         </div>
       </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="probootstrap-room">
+          <a href="#"><img src="img/Football1.png" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></a>
+          <div class="text">
+            <h3>Union School Stadium</h3>
+            <p>Football <strong>$29.00/Hour</strong></p>
+            <div class="post-meta mb30">
+                      
+
         </div>
       </div>
     </div>
   </div>
-  @endforeach
 </section>
 @endsection
 

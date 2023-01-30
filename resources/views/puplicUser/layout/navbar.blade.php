@@ -1,5 +1,7 @@
 @section('script')
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="{{URL::asset('https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js') }}"></script>
+  
+ 
     
 @endsection
 <!-- header section starts  -->
@@ -13,7 +15,7 @@
   <nav class="navbar">
       <a href="{{ route('puplicUser.welcome') }}">Home</a>
       <a href="{{ url('/about') }}">About</a>
-      <a href="{{ route('puplicUser.fields')}}">Fields</a>
+      {{-- <a href="{{ route('fields.index')}}">Fields</a> --}}
       <a href="{{ url('/contact') }}">Contact</a>
   </nav>
 
