@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\UserSide;
 use App\Http\Controllers\Controller;
-
+use App\Models\Categories;
+use App\Models\Playgrounds;
 use Illuminate\Http\Request;
 
 class masterController extends Controller
@@ -14,7 +15,12 @@ class masterController extends Controller
      */
     public function index()
     {
-        return view('puplicUser.welcome');
+
+        $categories = Categories::All();
+
+        // dd(foreach($categories as $categorie));
+
+        return view('puplicUser.welcome',compact('categories'));
     }
 
     /**
@@ -46,7 +52,7 @@ class masterController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

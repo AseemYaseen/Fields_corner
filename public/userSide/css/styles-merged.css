@@ -1437,7 +1437,11 @@ figure {
 }
 
 img {
-    vertical-align: middle
+    vertical-align: middle;
+    /* margin-left: -3rem; */
+}
+.hires {
+    margin-left: -3rem;
 }
 
 .carousel-inner>.item>a>img,
@@ -7184,6 +7188,7 @@ button.close {
     font-family: serif;
     line-height: 1
 }
+
 
 .carousel-control .icon-prev:before {
     content: '\2039'

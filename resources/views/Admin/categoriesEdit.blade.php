@@ -10,6 +10,7 @@
     height: 75px;
     display: inline;
 }
+
 </style>
 @endsection
 
@@ -45,7 +46,7 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">description</label>
-                  <textarea  rows="4" cols="50" type="text" class="form-control desss" name="description" value="{{$CategoriesEdit->description}}"></textarea>
+                  <input type="text" class="form-control desss" name="description" value="{{$CategoriesEdit->description}}">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">File input</label>
