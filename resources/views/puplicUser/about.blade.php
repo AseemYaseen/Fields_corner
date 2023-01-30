@@ -22,7 +22,7 @@ about
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="probootstrap-slider-text text-center">
-                  <h1 class="probootstrap-heading probootstrap-animate">About Fields-Corner</h1>
+                  <h1 class="probootstrap-heading probootstrap-animate">About Us</h1>
                   {{-- <div class="probootstrap-animate probootstrap-sub-wrap">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</div> --}}
                 </div>
               </div>
@@ -39,14 +39,14 @@ about
   <div class="container" data-aos="fade-up">
 
     {{-- <div class="row position-relative"> --}}
-    <div class="row ">
+    <div class="row lb">
 
 
-      <div class="col-lg-5 about-img"><img src="https://th.bing.com/th/id/R.44559f09bae933392d8a8e0577a9750f?rik=dMtVnj9AAjiguQ&riu=http%3a%2f%2fwww.jordantimes.com%2fsites%2fdefault%2ffiles%2fgolf_7.jpg&ehk=wV1ZcNMdtseKDJSK8pNqDWwBYxXGzKQzv57xOl7Q7us%3d&risl=&pid=ImgRaw&r=0" style="margin:10rem 0rem ;" width="450px" height="390px" alt=""> </div>
+      <div class="col-lg-5 about-img "><img src="https://th.bing.com/th/id/R.44559f09bae933392d8a8e0577a9750f?rik=dMtVnj9AAjiguQ&riu=http%3a%2f%2fwww.jordantimes.com%2fsites%2fdefault%2ffiles%2fgolf_7.jpg&ehk=wV1ZcNMdtseKDJSK8pNqDWwBYxXGzKQzv57xOl7Q7us%3d&risl=&pid=ImgRaw&r=0" style="margin: 0.25rem -2rem;;" width="500px" height="403px" alt=""> </div>
 
-      <div class="col-lg-7" style="margin-top:7.25rem">
+      <div class="col-lg-7 " style="margin-top:0.25rem ;background-color: rgba(255,255,255,.6);">
         {{-- <h2 class="text-center">Aqaba Fields Corner</h2> --}}
-        <div class="our-story" >
+        <div class="our-story" style="padding-left: 20px;">
           {{-- <h4>Est 1988</h4> --}}
           <h3>Our Vision</h3>
           <p>Inventore aliquam beatae at et id alias. Ipsa dolores amet consequuntur minima quia maxime autem. Quidem id sed ratione. Tenetur provident autem in reiciendis rerum at dolor. Aliquam consectetur laudantium temporibus dicta minus dolor.</p>
@@ -61,7 +61,7 @@ about
 
           <div class="watch-video d-flex align-items-center position-relative">
             <i class="bi bi-play-circle"></i>
-            <button style="border-radius: 20px solid blue"><a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox stretched-link">Watch Video</a></button>
+            {{-- <button><a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox stretched-link">Watch Video</a></button> --}}
           </div>
         </div>
       </div>
@@ -123,12 +123,12 @@ about
 
 <!-- ======= Our Team Section ======= -->
 
-<section class="probootstrap-section">
+<section class="probootstrap-section ">
     <div class="container">
-      <div class="row">
+      <div class="row lb">
         <div class="section-header text-center">
-          <h2>Our Team</h2>
-          <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>
+          <h2>Our Team</h2><br>
+          {{-- <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p> --}}
         </div><br>
         <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="probootstrap-room">
