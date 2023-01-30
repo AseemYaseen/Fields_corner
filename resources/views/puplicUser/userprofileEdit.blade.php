@@ -28,7 +28,6 @@ User Profile
                             <div class="mt-3">
                                 <h4>John Doe</h4>
                                 <p class="text-secondary mb-1">Full Stack Developer</p>
-                                <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
                             </div>
                         </div>
 
@@ -56,26 +55,6 @@ User Profile
                             </div>
                         </div>
                         <br>
-
-                        <div class="row mb-3">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Phone</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="(239) 816-9029">
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row mb-3">
-                            <div class="col-sm-3">
-                                <h6 class="mb-0">Address</h6>
-                            </div>
-                            <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
-                            </div>
-                        </div>
-                        <br>
-
                         <div class="row">
                             <div class="col-sm-3"></div>
                             <div class="col-sm-9 text-secondary">
@@ -86,7 +65,6 @@ User Profile
                 </div>
             </div>
         </div>
-
         </div>
     </div>
 
