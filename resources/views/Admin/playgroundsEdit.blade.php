@@ -5,12 +5,13 @@
 
 @section('css')
 <style>
-.desss{
-    width: 100%;
-    height: 75px;
-    display: inline;
-}
-</style>
+  .desss{
+      width: 100%;
+      height: 75px;
+      display: inline;
+  }
+  
+  </style>
 @endsection
 
 @section('title_page')
@@ -49,7 +50,7 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Description</label>
-                  <textarea  rows="4" cols="50" type="text" class="form-control" name="description" value="{{$playgroundsEdit->description}}"></textarea>
+                  <input  rows="4" cols="50" type="text" class="form-control desss" name="description" value="{{$playgroundsEdit->description}}">
                 </div>
 
                 <div class="row">

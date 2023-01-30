@@ -16,8 +16,6 @@ login
 {{--============= contant ===============--}}
 @section('contant')
 
-<div class="wrapper" style="background-image: url('img/img_9.jpg'); ">
-    <div class="inner" style="width: 700px !important">
 
 {{-- <div class="wrapper" style="background-image: url('img/img_9.jpg'); ">
     <div class="inner " style="width: 700px !important">
