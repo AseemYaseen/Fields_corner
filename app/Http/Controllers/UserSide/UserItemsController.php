@@ -2,25 +2,27 @@
 
 namespace App\Http\Controllers\UserSide;
 use App\Http\Controllers\Controller;
-use App\Models\Categories;
 use App\Models\Playgrounds;
+use App\Models\Categories;
+use App\Models\UserItems;
 use Illuminate\Http\Request;
 
-class masterController extends Controller
+class UserItemsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
+        $Playgrounds = Playgrounds::get();
+        $categories = Categories::findOrFail($id);
 
-        $categories = Categories::All();
-
+        // dd($categories);
         // dd(foreach($categories as $categorie));
 
-        return view('puplicUser.welcome',compact('categories'));
+        return view('puplicUser.fields',compact('Playgrounds'));
     }
 
     /**
@@ -47,21 +49,38 @@ class masterController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\UserItems  $userItems
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        
+    // $categories = Categories::findorFail($id);
+    $Playgrounds = Playgrounds::where('category_id',$id)->get();
+
+    // dd(foreach($categories as $categorie));
+
+    return view('puplicUser.fields',compact('Playgrounds'));
+      
+        // if(Categories::where('name',$name)->exists()){
+        //     $category = Categories::where('name',$name)->first();
+        //     $fields = Playgrounds::where('category_id', $category->id)->get();
+        //     return view('puplicUser.fields', compact('category','fields'));
+
+        // }else{
+        //     return redirect('/')->with('status',"Category does not exist");
+        // }
+        // 
+
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\UserItems  $userItems
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(UserItems $userItems)
     {
         //
     }
@@ -70,10 +89,10 @@ class masterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\UserItems  $userItems
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, UserItems $userItems)
     {
         //
     }
@@ -81,10 +100,10 @@ class masterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\UserItems  $userItems
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(UserItems $userItems)
     {
         //
     }

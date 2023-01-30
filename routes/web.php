@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ReservationsController;
 use App\Http\Controllers\UserSide\MasterController;
 use App\Http\Controllers\UserSide\categoryController;
 use App\Http\Controllers\UserSide\reservatioonController;
+use App\Http\Controllers\UserSide\UserItemsController;
 use App\Http\Controllers\UserSide\registerController;
 use App\Http\Controllers\UserSide\loginController;
 use App\Http\Controllers\UserSide\searchController;
@@ -65,12 +66,17 @@ Route::middleware(['auth','verified','Admin'])->group(function () {
 require __DIR__.'/auth.php';
 
 
-
+Route::resource('/fields', UserItemsController::class);
+// Route::get('fields/{id}', [UserItemsController::class, 'show'])->name('fields');
 Route::get('/',[MasterController::class,'index'])->name('puplicUser.welcome');
-Route::get('/fields',[categoryController::class,'index'])->name('puplicUser.fields');
 Route::get('/reservatioon',[reservatioonController::class,'index'])->name('puplicUser.reservation');
+// Route::get('/fields',[categoryController::class,'show'])->name('puplicUser.fields');
+// Route::get('/fields',[categoryController::class,'show'])->name('items');
 // Route::get('/register',[registerController::class,'index'])->name('puplicUser.register');
 // Route::get('/login',[loginController::class,'index'])->name('puplicUser.login');
+
+
+Route::resource('payments', 'PaymentsController', ['except' => 'create']);
 
 
 Route::get('/about', function () {
