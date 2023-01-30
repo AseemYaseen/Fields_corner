@@ -7,7 +7,7 @@
  <header class="lb">
 
   {{-- <div id="menu-bar" class="fas fa-bars "></div> --}}
-  <a class="logo" href="{{ route('puplicUser.welcome') }}"><img src="img/logo.png" class="hires" width="150" height="80" alt="Free Bootstrap Template by uicookies.com"></a>
+  <a class="logo" href="{{ route('puplicUser.welcome') }}"><img src="/img/logo.png" class="hires" width="150" height="80" alt="Free Bootstrap Template by uicookies.com"></a>
   {{-- <a href="#" class="logo"><span>T</span>ravel</a> --}}
 
   <nav class="navbar">
