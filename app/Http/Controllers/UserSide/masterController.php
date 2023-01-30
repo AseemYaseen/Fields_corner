@@ -17,8 +17,7 @@ class masterController extends Controller
     {
 
         $categories = Categories::All();
-
-        // dd(foreach($categories as $categorie));
+        
 
         return view('puplicUser.welcome',compact('categories'));
     }

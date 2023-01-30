@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('user_reservations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('reservation_id')->references('id')->on('reservations')->onDelete('cascade');
             $table->timestamps();
         });
     }

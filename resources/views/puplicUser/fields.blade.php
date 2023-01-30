@@ -48,7 +48,7 @@
                 {{-- <div class="post-meta mb30">
                 
                 </div> --}}
-                <p><a href="{{ route('puplicUser.reservation') }}" class="btn btn-primary" role="button">Reserve now for $29.00</a></p>
+                <p><a href="{{route('book', $Playground->id)}}" class="btn btn-primary" role="button">Reserve now for $29.00</a></p>
               {{-- </div>
             </div> --}}
           </div>
