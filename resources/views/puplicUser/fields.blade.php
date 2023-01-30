@@ -17,7 +17,7 @@
 
 <section class="probootstrap-slider flexslider probootstrap-inner">
   <ul class="slides">
-     <li style="background-image: url(img/services.jpeg);" class="overlay">
+     <li style="background-image: url(/img/services.jpeg);" class="overlay">
         <div class="container">
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
@@ -32,30 +32,31 @@
       </li>
   </ul>
 </section>
+
 <section class="probootstrap-section">
   <div class="container">
     <div class="row">
       @foreach($Playgrounds as $Playground)
-      
       <div class="col-md-4 col-sm-6 col-xs-12">
-        <div class="probootstrap-room">
-          <a href="#"><img src="img/swimming1.png" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></a>
-          <div class="text">
-           {{-- {{dd($Playground)}}  --}}
-            <h3>{{$Playground->name}}</h3>
-            <p> Swimming pool <strong>$29.00/Hour</strong></p>
-            <div class="post-meta mb30">
-             
-            </div>
-            <p><a href="{{ route('puplicUser.reservation') }}" class="btn btn-primary" role="button">Reserve now for $29.00</a></p>
+            <div class="probootstrap-room">
+              {{-- <img src="{{URL::asset("storage/image/$Playground->image")}} --}}
+              <a href=""><img src={{URL::asset("storage/image/$Playground->image")}} style="width:450px; height:250px; border-radius:8px 8px 0 0;" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></a>
+              <div class="text">
+              {{-- {{dd($Playground)}}  --}}
+                <h4>{{$Playground->name}}</h4>
+                <p> Swimming pool <strong>$29.00/Hour</strong></p>
+                {{-- <div class="post-meta mb30">
+                
+                </div> --}}
+                <p><a href="{{ route('puplicUser.reservation') }}" class="btn btn-primary" role="button">Reserve now for $29.00</a></p>
+              {{-- </div>
+            </div> --}}
           </div>
         </div>
       </div>
-        </div>
-      </div>
+      @endforeach
     </div>
   </div>
-  @endforeach
 </section>
 @endsection
 

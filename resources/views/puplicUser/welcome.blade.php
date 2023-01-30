@@ -104,7 +104,7 @@
               <div class="item">
                 <div class="probootstrap-room">
                   {{-- <a href="{{route('fields.show',['field'=>$categorie['id']])}}"><img src="{{URL::asset("storage/image/$categorie->image")}}"style="width:400px; height:200px" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></a> --}}
-                      <a href="{{route('fields.show',$categorie->id)}}"><img src="{{URL::asset("storage/image/$categorie->image")}}"style="width:400px; height:200px" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></a>
+                      <a href="{{route('fields.show',$categorie->id)}}"><img src="{{URL::asset("storage/image/$categorie->image")}}"style="width:500px; height:220px; border-radius:8px 8px 0 0;" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></a>
                   <div class="text">
                     <h3>{{$categorie->name}}</h3>
                     <div class="post-meta">
