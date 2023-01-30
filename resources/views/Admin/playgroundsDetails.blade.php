@@ -42,7 +42,7 @@ Categories Details
           <hr>
           <div class="col-12 col-sm-6">
             {{-- {{dd($playgroundsDetails->Categories)}} --}}
-            <h3 class="my-3">{{$playgroundsDetails->Categories->name}}</h3>
+            <h3 class="my-3"> <p style="font-size:22px;">Category :</p>{{$playgroundsDetails->Categories->name}}</h3>
             <hr>
 
           <div class="bg-gray py-2 px-3 mt-4">
@@ -59,11 +59,11 @@ Categories Details
       <div class="row mt-4">
         <nav class="w-100">
           <div class="nav nav-tabs" id="product-tab" role="tablist">
-            <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Description</a>
+            <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc " aria-selected="true" style="font-size: 22px;">Description</a>
           </div>
         </nav>
         <div class="tab-content p-3" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab">{{$playgroundsDetails->description}} </div>
+          <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab" style="font-size: 22px;">{{$playgroundsDetails->description}} </div>
         </div>
       </div>
     </div>

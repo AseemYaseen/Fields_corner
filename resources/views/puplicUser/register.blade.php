@@ -3,8 +3,8 @@
 Register
 @endsection
 @section('css')
-<link rel="stylesheet" href="userSide/register/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
-<link rel="stylesheet" href="userSide/register/css/style.css">
+<link rel="stylesheet" href="{{asset("userSide/register/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css")}}">
+<link rel="stylesheet" href="{{asset("userSide/register/css/style.css")}}">
 @endsection
 
 {{--============= showCase ===============--}}Q

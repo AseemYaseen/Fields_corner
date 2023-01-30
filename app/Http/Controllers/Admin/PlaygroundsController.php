@@ -99,7 +99,6 @@ class PlaygroundsController extends Controller
         $playgroundsEdit = Playgrounds::findorFail($id);
         // $playgroundsEdit = Playgrounds::where();
         $playgroundsCat=Categories::all();
-        // $playgroundsEdit 
         // $playgroundsCat= Playgrounds::with('Categories')->get();
         //    $Playgrounds = Categories::where('id',$id)->first(); //  method 2 -- when id = id - get the data of the first row
            return view('Admin.playgroundsEdit',compact('playgroundsEdit', 'playgroundsCat'));

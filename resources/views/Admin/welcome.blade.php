@@ -62,7 +62,7 @@ Control panel
           </div>
         </div>
         <!-- /.card -->
-
+      
         <div class="card">
           <div class="card-header border-0">
             <h3 class="card-title">Products</h3>
