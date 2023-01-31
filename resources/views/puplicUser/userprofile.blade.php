@@ -54,6 +54,83 @@ User Profile
                     </div>
                   </div>
                   <hr>
+
+                  <table>
+                    <caption>Reservation Summary</caption>
+                    {{-- {{dd($Users->Reservations)}} --}}
+                    @if ($Users->Reservations->Status == 1)
+
+                    <thead>
+                      {{-- @foreach($Users->Reservations as $Reservations) --}}
+                      <tr>
+                        <th scope="col">First name</th>
+                        <th scope="col">Last name</th>
+                        <th scope="col">Phone number</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">End Date</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Account">{{$Users->Reservations->first_name}}</td>
+                        <td data-label="Due Date">{{$Users->Reservations->last_name}}</td>
+                        <td data-label="Amount">{{$Users->Reservations->phone_number}}</td>
+                        <td data-label="Period">{{$Users->Reservations->Start_date}}</td>
+                        <td data-label="Period">{{$Users->Reservations->End_date}}</td>
+                        <td data-label="Period"><span class="Approved">Approved</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  @endif 
+
+                  @if ($Users->Reservations->Status == 0)
+                  <thead>
+                    <tr>
+                      <th scope="col">First name</th>
+                      <th scope="col">Last name</th>
+                      <th scope="col">Phone number</th>
+                      <th scope="col">Start Date</th>
+                      <th scope="col">End Date</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Account">{{$Users->Reservations->first_name}}</td>
+                      <td data-label="Due Date">{{$Users->Reservations->last_name}}</td>
+                      <td data-label="Amount">{{$Users->Reservations->phone_number}}</td>
+                      <td data-label="Period">{{$Users->Reservations->Start_date}}</td>
+                      <td data-label="Period">{{$Users->Reservations->End_date}}</td>
+                      <td data-label="Period"><span class="Pending">Pending</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                @endif
+
+                @if ($Users->Reservations->Status == 2)
+                <thead>
+                  <tr>
+                    <th scope="col">First name</th>
+                    <th scope="col">Last name</th>
+                    <th scope="col">Phone number</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Account">{{$Users->Reservations->first_name}}</td>
+                    <td data-label="Due Date">{{$Users->Reservations->last_name}}</td>
+                    <td data-label="Amount">{{$Users->Reservations->phone_number}}</td>
+                    <td data-label="Period">{{$Users->Reservations->Start_date}}</td>
+                    <td data-label="Period">{{$Users->Reservations->End_date}}</td>
+                    <td data-label="Period"><span class="Rejected">Rejected</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              @endif
                   <div class="row">
                     <div class="col-sm-12">
                       <a class="btn btn-primary " target="__blank" href="{{ route('userprofileEdit.edit')}}" >Edit</a>
