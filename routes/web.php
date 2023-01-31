@@ -98,4 +98,4 @@ Route::get('singleItem',function(){
     return view('singleItem');
 });
 
-Route::post('puplicUser.search' , [searchController::class , 'search'])->name('search');
+Route::post('search' , [searchController::class , 'search'])->name('search');

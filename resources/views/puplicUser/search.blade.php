@@ -1,4 +1,4 @@
-@extends('publicUser.layout.master')
+@extends('puplicUser.layout.master')
 @section('title')
    search
 @endsection
