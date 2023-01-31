@@ -43,7 +43,7 @@ class BookController extends Controller
             'playground_id' => $id,
         ]);
         $book->save();
-return response('ok');
+        return view('puplicUser.contact'); 
         // return redirect()->route('user.profile.index');
     }
 

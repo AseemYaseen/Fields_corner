@@ -82,6 +82,13 @@
         padding:5px 10px;
    
 }
+.Rejected{
+  background-color: rgb(204, 58, 0);
+    display: inline-block;
+        color:rgb(255, 255, 255);
+        border-radius:10px;
+        padding:5px 10px;
+}
 
 </style>
 
@@ -201,7 +208,7 @@
                 $s=1
                 ?>
                  @foreach ($reservations as $reservation)
-                @if ($reservation->Status)
+                @if ($reservation->Status == 1)
               <tr>
                 <td>{{$s++}}</td>
                 <td>{{$reservation->first_name}}</td>
@@ -218,6 +225,30 @@
               </tr>
               @endif
               @endforeach
+
+
+
+              <?php
+              $s=1
+              ?>
+               @foreach ($reservations as $reservation)
+              @if ($reservation->Status == 2)
+            <tr>
+              <td>{{$s++}}</td>
+              <td>{{$reservation->first_name}}</td>
+              <td>{{$reservation->last_name}}</td>
+              <td>{{$reservation->phone_number}}</td>
+              <td>{{$reservation->user_id}}</td>
+              {{-- <td>{{isset($reservation->playgrounds->name)?$reservation->playgrounds->name:"no data"}}</td> --}}
+              <td>{{($reservation->playgrounds->name)}}</td>
+              <td>{{$reservation->Start_date}}</td>
+              <td>{{$reservation->End_date}}</td>
+              <td>{{$reservation->total_price}}</td>
+              <td><span class="Rejected">Rejected</span></td>
+
+            </tr>
+            @endif
+            @endforeach
             </tbody>
           </table>
         </div>

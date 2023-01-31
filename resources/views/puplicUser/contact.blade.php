@@ -17,7 +17,7 @@
 
 <section class="probootstrap-slider flexslider probootstrap-inner">
     <ul class="slides">
-       <li style="background-image: url(img/contactus.jpg);" class="overlay">
+       <li style="background-image: url(/img/contactus.jpg);" class="overlay">
           <div class="container">
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
