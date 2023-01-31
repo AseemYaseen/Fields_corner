@@ -30,7 +30,6 @@ User Profile
                                 <p class="text-secondary mb-1">Full Stack Developer</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -42,7 +41,7 @@ User Profile
                                 <h6 class="mb-0">Full Name</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="John Doe">
+                                <input type="text" class="form-control" value="">
                             </div>
                         </div>
                         <br>
@@ -51,7 +50,7 @@ User Profile
                                 <h6 class="mb-0">Email</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="john@example.com">
+                                <input type="text" class="form-control" value="">
                             </div>
                         </div>
                         <br>

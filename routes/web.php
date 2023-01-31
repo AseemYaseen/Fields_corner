@@ -13,6 +13,7 @@ use App\Http\Controllers\UserSide\UserItemsController;
 use App\Http\Controllers\UserSide\registerController;
 use App\Http\Controllers\UserSide\loginController;
 use App\Http\Controllers\UserSide\searchController;
+use App\Http\Controllers\UserSide\ProfileEditController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,10 +89,13 @@ Route::get('/contact', function () {
 Route::get('/UserProfile',function(){
     return view('puplicUser.userprofile');
 });
-Route::get('/Edit',function(){
-    return view('puplicUser.userprofileEdit');
-});
+// Route::get('/Edit',function(){
+//     return view('puplicUser.userprofileEdit');
+// });
 Route::get('singleItem',function(){
     return view('singleItem');
 });
+
+// Route::resource('/userprofileEdit', ProfileEditController::class);
+// // Route::get()
 
