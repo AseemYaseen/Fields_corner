@@ -7,7 +7,6 @@
 
 @endsection
 
-
 {{--============= showCase ===============--}}
 @section('showCase')
 
@@ -15,15 +14,14 @@
 
 {{--============= contant ===============--}}
 @section('contant')
-
 <section class="probootstrap-slider flexslider probootstrap-inner">
     <ul class="slides">
-       <li style="background-image: url(img/slider_1.jpg);" class="overlay">
+       <li style="background-image: url(/img/slider_1.jpg);" class="overlay">
           <div class="container">
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="probootstrap-slider-text text-center">
-                  <p><img src="img/curve_white.svg" class="seperator probootstrap-animate" alt="Free HTML5 Bootstrap Template"></p>
+                  <p><img src="/img/curve_white.svg" class="seperator probootstrap-animate" alt="Free HTML5 Bootstrap Template"></p>
                   <h1 class="probootstrap-heading probootstrap-animate">Book your Corner</h1>
                   <div class="probootstrap-animate probootstrap-sub-wrap">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</div>
                 </div>
@@ -33,7 +31,6 @@
         </li>
     </ul>
 </section>
-
   <section class="probootstrap-section">
     <div class="container">
       <div class="row probootstrap-gutter40">
@@ -49,6 +46,7 @@
                   <input type="text" class="form-control" id="fname" name="first_name" value="{{old('first_name')}}" class="@error('first_name') is-invalid @enderror"
                   >
                   <input type="hidden" class="form-control" id="fname" name="user_id" value="{{Auth::user()->id}}">
+                  
                   @error('first_name')
                      <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
@@ -167,7 +165,7 @@
                 <div class="row" style="margin-top:5em;">
                     <div class="col-md-6" >
                         <div class="images p-3">
-                            <div class="text-center p-4"> <img id="main-image" src="https://i.imgur.com/Dhebu4F.jpg" width="250" /> </div>
+                            <div class="text-center p-4"> <img id="main-image" src={{URL::asset("storage/image/$Playgrounds->image")}} width="250" /> </div>
                             {{-- <div class="thumbnail text-center"> <img onclick="change_image(this)" src="https://i.imgur.com/Rx7uKd0.jpg" width="70"> <img onclick="change_image(this)" src="https://i.imgur.com/Dhebu4F.jpg" width="70"> </div> --}}
                         </div>
                     </div>
@@ -177,10 +175,10 @@
                                 <div class="d-flex align-items-center"> <i class="fa fa-long-arrow-left"></i> <span class="ml-1">Back</span> </div> <i class="fa fa-shopping-cart text-muted"></i>
                             </div> --}}
                             {{-- <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand">Orianz</span> --}}
-                                <h5 class="text-uppercase">Men's slim fit t-shirt</h5>
+                                <h5 class="text-uppercase" style="font-weight: 800; color:black">{{$Playgrounds->name}}</h5>
 
                             {{-- </div> --}}
-                            <p class="about">Shop from a wide range of t-shirt from orianz. Pefect for your everyday use, you could pair it with a stylish pair of jeans or trousers complete the look.</p>
+                            <p class="about">{{$Playgrounds->description}}</p>
 
                         </div>
                     </div>

@@ -60,7 +60,7 @@
                           <label>Choose a Category</label>
                           <select name="category_id" class="custom-select">
                             @foreach($playgroundsCat as $category)
-                          <option value="{{$category->id}}">{{$category->name}}</option>
+                          <option value="{{$category->id}}"> {{$category->name}}</option>
                           {{-- isset($movie->image) ? $movie->image->movie_image : "" --}}
                           @endforeach
                         </select>

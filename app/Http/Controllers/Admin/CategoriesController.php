@@ -42,7 +42,7 @@ class CategoriesController extends Controller
         $request->file('image')->storeAs('public/image', $photoName);
         $categories->image = $photoName;
         $categories->save();
-        return response('All done');
+        return redirect()->route('categories.index');
         // return view('Admin.categories');
     }
 

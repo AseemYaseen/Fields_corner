@@ -103,7 +103,9 @@ class ReservationsController extends Controller
      */
     public function destroy(Reservations $reservations, $id)
     {
-        Reservations::destroy($id);
+        $reservation = Reservations::findorFail($id);
+        $reservation->Status ='2';
+        $reservation->save();
         return redirect()->route('reservation.index');
 
     }

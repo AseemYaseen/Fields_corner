@@ -72,8 +72,11 @@ class userController extends Controller
         $Users = User::findorFail($id);
 
         if ($Users->is_admin == 0){
+            
             $Users->is_admin = 1;
-        }else{
+        }
+        
+        else{
             $Users->is_admin = 0;
         }
         

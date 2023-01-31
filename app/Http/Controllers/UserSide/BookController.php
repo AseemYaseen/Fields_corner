@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\UserSide;
-
 use App\Http\Controllers\Controller;
 use App\Models\Reservations;
 use App\Models\Playgrounds;
+use App\Models\User;
+
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -31,7 +32,7 @@ class BookController extends Controller
       
 // dd($price);
         $user=$request->user_id;
-        Reservations::create([
+        $book = Reservations::create([
 
             'first_name' => $request->first_name,
             'user_id' => $user,
@@ -40,10 +41,50 @@ class BookController extends Controller
             'Start_date' => $request->Start_date,
             'End_date' => $request->End_date,
             'playground_id' => $id,
-
-
         ]);
+        $book->save();
 return response('ok');
         // return redirect()->route('user.profile.index');
     }
+
+
+    public function profile($id)
+    {
+        $Users = User::findOrFail($id);
+        return view('puplicUser.userprofile',['Users'=>$Users]);
+    }
+
+
+    public function profileEdit($id){
+
+        $Users = User::findOrFail($id);
+        return view('puplicUser.userprofileEdit',['Users'=>$Users]);
+    }
+
+    
+
+    public function profileUpdate(Request $request,$id){
+        $userEdit = User::findorFail($id);
+        $userEdit->update($request->all());
+        $ida= auth()->user()->id;
+        return redirect()->route('profile',$ida);
+
+
+}
+
+    public function ReservstionUpdate(Request $request,$id){
+
+        // $reservation = Reservations::where('id', $id)->get();
+        $reservation =  Reservations::findorFail($id);
+        $reservation->Status ='0';
+        $reservation->save();
+        $reservation->update($request->all());
+        $ids= auth()->user()->id;
+        return redirect()->route('profile',$ids);
+
+
+
+    
+}
+
 }

@@ -67,13 +67,16 @@ Route::middleware(['auth','verified','Admin'])->group(function () {
 
 require __DIR__.'/auth.php';
 
-
 Route::resource('/fields', UserItemsController::class);
 // Route::resource('/reservationUse', UserReservationController::class);
 // Route::resource('feestype', 'YourController');
 
 Route::get('/',[MasterController::class,'index'])->name('puplicUser.welcome');
-Route::get('/book/{id}',[BookController::class,'index'])->name('book');
+Route::get('/book/{id}',[BookController::class,'index'])->name('book')->middleware('auth');
+Route::get('/UserProfile/{id}',[BookController::class,'profile'])->name('profile');
+Route::get('/UserProfileEdit/{id}',[BookController::class,'profileEdit'])->name('profileEdit');
+Route::get('/UserProfileUpdate/{id}',[BookController::class,'profileUpdate'])->name('profileUpdate');
+Route::get('/UserReservationUpdate/{id}',[BookController::class,'ReservstionUpdate'])->name('ReservstionUpdate');
 Route::get('/book/create/{id}',[BookController::class,'create'])->name('book.create');
 
 Route::resource('payments', 'PaymentsController', ['except' => 'create']);
@@ -85,12 +88,12 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('puplicUser.contact');
 });
-Route::get('/UserProfile',function(){
-    return view('puplicUser.userprofile');
-});
-Route::get('/Edit',function(){
-    return view('puplicUser.userprofileEdit');
-});
+// Route::get('/UserProfile',function(){
+//     return view('puplicUser.userprofile');
+// });
+// Route::get('/Edit',function(){
+//     return view('puplicUser.userprofileEdit');
+// });
 Route::get('singleItem',function(){
     return view('singleItem');
 });

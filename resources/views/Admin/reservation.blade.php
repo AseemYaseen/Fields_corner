@@ -136,7 +136,7 @@
                 <td><form class="butnMargin" action="{{route('reservation.update', $reservation->id)}}" method="post">
                     @method('PUT')
                     @csrf
-                    <button href="" type="submit" class="Editb Thepennding"><span>Pendding</span></button>
+                    <button href="" type="submit" class="Editb Thepennding"><span>Pending</span></button>
                    </form></td>
 
                    <td><form class="butnMargin" action="{{route('reservation.destroy', $reservation->id)}}" method="post">
@@ -213,7 +213,7 @@
                 <td>{{$reservation->Start_date}}</td>
                 <td>{{$reservation->End_date}}</td>
                 <td>{{$reservation->total_price}}</td>
-                <td><span class="Accepted">Accepted</span></td>
+                <td><span class="Accepted">Approved</span></td>
 
               </tr>
               @endif
