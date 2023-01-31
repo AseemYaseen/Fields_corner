@@ -98,3 +98,4 @@ Route::get('singleItem',function(){
     return view('singleItem');
 });
 
+Route::post('search' , [searchController::class , 'search'])->name('search');

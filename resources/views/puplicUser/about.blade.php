@@ -42,22 +42,22 @@ about
     <div class="row lb">
 
 
-      <div class="col-lg-5 about-img "><img src="https://th.bing.com/th/id/R.44559f09bae933392d8a8e0577a9750f?rik=dMtVnj9AAjiguQ&riu=http%3a%2f%2fwww.jordantimes.com%2fsites%2fdefault%2ffiles%2fgolf_7.jpg&ehk=wV1ZcNMdtseKDJSK8pNqDWwBYxXGzKQzv57xOl7Q7us%3d&risl=&pid=ImgRaw&r=0" style="margin: 0.25rem -2rem;;" width="500px" height="403px" alt=""> </div>
+      <div class="col-lg-5 about-img "><img src="https://th.bing.com/th/id/R.44559f09bae933392d8a8e0577a9750f?rik=dMtVnj9AAjiguQ&riu=http%3a%2f%2fwww.jordantimes.com%2fsites%2fdefault%2ffiles%2fgolf_7.jpg&ehk=wV1ZcNMdtseKDJSK8pNqDWwBYxXGzKQzv57xOl7Q7us%3d&risl=&pid=ImgRaw&r=0" style="margin: 0.25rem -2rem;" width="500px" height="349px" alt=""> </div>
 
       <div class="col-lg-7 " style="margin-top:0.25rem ;background-color: rgba(255,255,255,.6);">
         {{-- <h2 class="text-center">Aqaba Fields Corner</h2> --}}
         <div class="our-story" style="padding-left: 20px;">
           {{-- <h4>Est 1988</h4> --}}
           <h3>Our Vision</h3>
-          <p>Inventore aliquam beatae at et id alias. Ipsa dolores amet consequuntur minima quia maxime autem. Quidem id sed ratione. Tenetur provident autem in reiciendis rerum at dolor. Aliquam consectetur laudantium temporibus dicta minus dolor.</p>
+          <p>Field corner is a project based on the collection of Aqaba sports stadiums of all kinds and forms, as it contains many stadiums and sports facilities, such as:</p>
           <ul>
-            <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commo</span></li>
-            <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in</span></li>
-            <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-            <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Internationally accredited five-a-side football fields</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Basketball courts</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Golf courses</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Swimming facilities</span></li>
 
           </ul>
-          <p>Vitae autem velit excepturi fugit. Animi ad non. Eligendi et non nesciunt suscipit repellendus porro in quo eveniet. Molestias in maxime doloremque.</p>
+          <p>So,our vision represents in providing platforms that view Aqaba Fields</p>
 
           <div class="watch-video d-flex align-items-center position-relative">
             <i class="bi bi-play-circle"></i>

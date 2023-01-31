@@ -27,9 +27,11 @@
                   <br>
                   <br>
                   <div class="box">
-                    <form name="search">
-                        <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
-                    </form>
+                    <form action="{{ route('search') }}" method="post">
+                      @csrf
+                      <input type="text" name="search" class="search" placeholder="Search...">
+                      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                  </form>
                     <i class="fas fa-search"></i>
                 </div>
                 </div>
@@ -47,10 +49,15 @@
                   <br>
                   <br>
                   <div class="box">
-                    <form name="search">
+                    {{-- <form name="search">
                         <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
                     </form>
-                    <i class="fas fa-search"></i>
+                    <i class="fas fa-search"></i> --}}
+                    <form action="{{ route('search') }}" method="post">
+                      @csrf
+                      <input type="text" name="search" class="search" placeholder="Search...">
+                      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                  </form>
                 </div>
                 </div>
               </div>
@@ -70,10 +77,15 @@
                     <br>
                     <br>
                     <div class="box">
-                        <form name="search">
+                        {{-- <form name="search">
                             <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
-                        </form>
-                        <i class="fas fa-search"></i>
+                        </form> --}}
+                        {{-- <i class="fas fa-search"></i> --}}
+                        <form action="{{ route('search') }}" method="post">
+                          @csrf
+                          <input type="text" name="search" class="search" placeholder="Search...">
+                          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -181,7 +193,8 @@
 
 
 <section >
-<div class="container">
+<div class="container" style="margin-top: 5rem;
+">
   <div class="row mb30">
     <div class="col-md-8 col-md-offset-2 probootstrap-section-heading text-center">
       <h2>what we offer</h2>
