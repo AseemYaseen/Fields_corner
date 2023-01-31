@@ -24,9 +24,19 @@ class ReservationsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($request)
     {
-        
+        // UserReservation::create($request->all());
+        // return view('puplicUser.reservation');
+
+        // $Reservations = New Reservations();
+        // $Reservations->first_name = $request->first_name;
+        // $Reservations->last_name = $request->last_name;
+        // $Reservations->phone_number = $request->phone_number;
+        // $Reservations->Start_date = $request->Start_date;
+        // $Reservations->End_date = $request->End_date;
+        // $Reservations->save();
+        // return redirect()->route('reservation.index');
     }
 
     /**
@@ -48,7 +58,8 @@ class ReservationsController extends Controller
      */
     public function show(Reservations $reservations)
     {
-        //
+
+        return view('puplicUser.reservation');
     }
 
     /**
@@ -92,7 +103,9 @@ class ReservationsController extends Controller
      */
     public function destroy(Reservations $reservations, $id)
     {
-        Reservations::destroy($id);
+        $reservation = Reservations::findorFail($id);
+        $reservation->Status ='2';
+        $reservation->save();
         return redirect()->route('reservation.index');
 
     }

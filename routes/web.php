@@ -9,7 +9,9 @@ use App\Http\Controllers\Admin\ReservationsController;
 use App\Http\Controllers\UserSide\MasterController;
 use App\Http\Controllers\UserSide\categoryController;
 use App\Http\Controllers\UserSide\reservatioonController;
+use App\Http\Controllers\UserSide\UserReservationController;
 use App\Http\Controllers\UserSide\UserItemsController;
+use App\Http\Controllers\UserSide\BookController;
 use App\Http\Controllers\UserSide\registerController;
 use App\Http\Controllers\UserSide\loginController;
 use App\Http\Controllers\UserSide\searchController;
@@ -43,9 +45,9 @@ Route::get('/', function () {
 // Route::resource('/playgrounds', PlaygroundsController::class);
 // Route::resource('/reservation', ReservationsController::class);
 
-Route::get('/dashboard', function () {
-    return view('Admin.welcome');
-})->middleware(['auth', 'verified',])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('Admin.welcome');
+// })->middleware(['auth', 'verified',])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -66,16 +68,17 @@ Route::middleware(['auth','verified','Admin'])->group(function () {
 
 require __DIR__.'/auth.php';
 
-
 Route::resource('/fields', UserItemsController::class);
-// Route::get('fields/{id}', [UserItemsController::class, 'show'])->name('fields');
-Route::get('/',[MasterController::class,'index'])->name('puplicUser.welcome');
-Route::get('/reservatioon',[reservatioonController::class,'index'])->name('puplicUser.reservation');
-// Route::get('/fields',[categoryController::class,'show'])->name('puplicUser.fields');
-// Route::get('/fields',[categoryController::class,'show'])->name('items');
-// Route::get('/register',[registerController::class,'index'])->name('puplicUser.register');
-// Route::get('/login',[loginController::class,'index'])->name('puplicUser.login');
+// Route::resource('/reservationUse', UserReservationController::class);
+// Route::resource('feestype', 'YourController');
 
+Route::get('/',[MasterController::class,'index'])->name('puplicUser.welcome');
+Route::get('/book/{id}',[BookController::class,'index'])->name('book')->middleware('auth');
+Route::get('/UserProfile/{id}',[BookController::class,'profile'])->name('profile');
+Route::get('/UserProfileEdit/{id}',[BookController::class,'profileEdit'])->name('profileEdit');
+Route::get('/UserProfileUpdate/{id}',[BookController::class,'profileUpdate'])->name('profileUpdate');
+Route::get('/UserReservationUpdate/{id}',[BookController::class,'ReservstionUpdate'])->name('ReservstionUpdate');
+Route::get('/book/create/{id}',[BookController::class,'create'])->name('book.create');
 
 Route::resource('payments', 'PaymentsController', ['except' => 'create']);
 
@@ -86,9 +89,9 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('puplicUser.contact');
 });
-Route::get('/UserProfile',function(){
-    return view('puplicUser.userprofile');
-});
+// Route::get('/UserProfile',function(){
+//     return view('puplicUser.userprofile');
+// });
 // Route::get('/Edit',function(){
 //     return view('puplicUser.userprofileEdit');
 // });
@@ -96,6 +99,4 @@ Route::get('singleItem',function(){
     return view('singleItem');
 });
 
-// Route::resource('/userprofileEdit', ProfileEditController::class);
-// // Route::get()
-
+Route::post('search' , [searchController::class , 'search'])->name('search');
