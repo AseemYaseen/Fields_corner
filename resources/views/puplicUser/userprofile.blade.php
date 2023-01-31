@@ -167,7 +167,9 @@ body {
 
                   <table>
                     <caption>Reservation Summary</caption>
+                    {{-- {{dd($Users->Reservations)}} --}}
                     @if ($Users->Reservations->Status == 1)
+
                     <thead>
                       {{-- @foreach($Users->Reservations as $Reservations) --}}
                       <tr>
