@@ -18,7 +18,6 @@ class UserItemsController extends Controller
     {
         $Playgrounds = Playgrounds::get();
         $categories = Categories::findOrFail($id);
-
         // dd($categories);
         // dd(foreach($categories as $categorie));
 

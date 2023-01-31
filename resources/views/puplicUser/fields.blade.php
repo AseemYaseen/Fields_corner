@@ -44,11 +44,10 @@
               <div class="text">
               {{-- {{dd($Playground)}}  --}}
                 <h4>{{$Playground->name}}</h4>
-                <p> Swimming pool <strong>$29.00/Hour</strong></p>
+                <p> {{$Playground->Categories->name}} <strong>{{$Playground->price}} JOD </strong></p>
                 {{-- <div class="post-meta mb30">
-                
                 </div> --}}
-                <p><a href="{{route('book', $Playground->id)}}" class="btn btn-primary" role="button">Reserve now for $29.00</a></p>
+                <p><a href="{{route('book', $Playground->id)}}" class="btn btn-primary" role="button"> Book for Hour {{$Playground->price}} JOD</a></p>
               {{-- </div>
             </div> --}}
           </div>

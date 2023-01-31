@@ -39,10 +39,10 @@
      </a>
     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
       @if(Auth::user())
-      
-      <li><a class="dropdown-item" href="{{ url('/UserProfile') }}"><i class="fa fa-user"></i> Profile</a></li>
-      <li><a href=" {{route('logout')}}"> <button type="button" class="btn btn-block btn-outline-danger btn-sm">Logout</button></a></li>
+      <li><a class="dropdown-item" href="{{route('profile',Auth::user()->id)}}"><i class="fa fa-user"></i> Profile</a></li>
+      <li><a class="dropdown-item" href="{{route('logout')}}"><i class="fa fa-user-plus"></i></i> logout</a></li>
       @endif
+      {{-- {{route('logout')}} --}}
       @if(!Auth::user())
       <li><a class="dropdown-item" href="{{ route('register') }}"><i class="fa fa-user-plus"></i></i> Register</a></li>
       <li><a class="dropdown-item" href="{{ route('login') }}"><i class="fa fa-sign-in"></i> Login</a></li>

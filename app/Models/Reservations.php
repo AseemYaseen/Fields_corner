@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use App\Models\Playgrounds;
+use App\Models\User;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -21,6 +22,11 @@ class Reservations extends Model
   
     public function Playgrounds(){
         return $this->belongsTo(Playgrounds::class,'playground_id');
+    
+    }
+
+    public function User(){
+        return $this->belongsTo(User::class,'user_id');
     
     }
 }

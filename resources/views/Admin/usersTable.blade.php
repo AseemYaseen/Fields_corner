@@ -84,7 +84,7 @@ Users table
             </thead>
             <tbody>
                 @foreach ($Users as $User)
-                @if (!$User->is_admin)
+                @if (!$User->is_admin == 1)
               <tr>
                 <td>{{$i++}}</td>
                 <td>{{$User->name}}</td>
@@ -139,7 +139,7 @@ Users table
                 @foreach ($Users as $User)
                 @if ($User->is_admin)
               <tr>
-                <td>{{ $s++}}</td>
+                <td>{{$s++}}</td>
                 <td>{{$User->name}}</td>
                 <td>{{$User->email}}</td>
                 <td><form class="butnMargin" onclick="return confirm('Are you sure you want to delete this Admin ?');" action="{{route('users.destroy', $User->id)}}" method="post">
