@@ -133,7 +133,7 @@ User Profile
               @endif
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-primary " target="__blank" href="{{ route('userprofileEdit.edit')}}" >Edit</a>
+                      <a class="btn btn-primary " target="__blank" href="{{route('profileEdit',Auth::user()->id)}}" >Edit</a>
                     </div>
                   </div>
                 </div>
