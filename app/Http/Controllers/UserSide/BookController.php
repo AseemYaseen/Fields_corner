@@ -51,6 +51,7 @@ class BookController extends Controller
     public function profile($id)
     {
         $Users = User::findOrFail($id);
+        // dd($Users->Reservations);
         return view('puplicUser.userprofile',['Users'=>$Users]);
     }
 
@@ -58,6 +59,7 @@ class BookController extends Controller
     public function profileEdit($id){
 
         $Users = User::findOrFail($id);
+
         return view('puplicUser.userprofileEdit',['Users'=>$Users]);
     }
 
