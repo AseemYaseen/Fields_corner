@@ -184,7 +184,7 @@
                 </ul>
               </div>
               Home to Jordan’s first 18-hole championship golf course and 9-hole golf academy is Ayla’s Signature Golf course, designed by legendary Greg Norman. Having built premium golf courses in Dubai, Oman, and Egypt, Greg took on the challenge of designing the first championship course in Jordan. With over 800,000 square meters of rolling green fairways, both beginner and expert golfers are welcome to enjoy this one-of-a-kind eco-friendly golf course overlooking Aqaba’s captivating mountain landscape.
-              <p><a href="#" class="btn btn-primary">More Details</a></p>
+              <p><a href="{{route('book',9)}}" class="btn btn-primary">More Details</a></p>
             </div>
           </div>
       </div>
@@ -273,7 +273,7 @@
         </p>
       </div>
     </div>
-    <p><a href="#" class="link-with-icon white">Show Details <i class=" icon-chevron-right"></i></a></p>
+    <p><a href="{{route('book',7)}}" class="link-with-icon white">Show Details <i class=" icon-chevron-right"></i></a></p>
   </div>
 </div>
 </section>

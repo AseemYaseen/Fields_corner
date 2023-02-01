@@ -15,6 +15,7 @@ use App\Http\Controllers\UserSide\BookController;
 use App\Http\Controllers\UserSide\registerController;
 use App\Http\Controllers\UserSide\loginController;
 use App\Http\Controllers\UserSide\searchController;
+use App\Http\Controllers\UserSide\ProfileEditController;
 
 /*
 |--------------------------------------------------------------------------

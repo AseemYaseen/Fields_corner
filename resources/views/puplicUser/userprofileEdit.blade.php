@@ -30,7 +30,6 @@ User Profile
                                 <p class="text-secondary mb-1">Full Stack Developer</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -55,7 +54,7 @@ User Profile
                                 <h6 class="mb-0">Email</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" name="email" value="{{$Users->email}}">
+                                <input type="text" class="form-control" value="john@example.com">
                             </div>
                         </div>
                         <br>
