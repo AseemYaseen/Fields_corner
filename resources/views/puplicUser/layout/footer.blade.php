@@ -4,7 +4,7 @@
       <div style="height:10px !important;" class="row">
         <div class="col-md-4">
           <div class="probootstrap-footer-widget">
-            <p class="mt40"><img src="/img/logo.png" class="hires" width="100" height="70"  alt="Free HTML5 Bootstrap Template by uicookies.com"></p>
+            <p class="mt40"><img src="/img/logo.png" class="hires" width="170" height="70"  alt="Free HTML5 Bootstrap Template by uicookies.com"></p>
             <p>We provide a reservation service through us for each of the fields and swimming pools available in the city of Aqaba</p>
             <p><a href="{{ url('about') }}" class="link-with-icon">Know More <i class=" icon-chevron-right"></i></a></p>
           </div>
