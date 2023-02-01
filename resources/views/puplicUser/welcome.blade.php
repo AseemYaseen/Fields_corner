@@ -27,13 +27,11 @@
                   <br>
                   <br>
                   <div class="box">
-                    <form action="{{ route('search') }}" method="post">
+                    <form name="search" action="{{ route('search') }}" method="post">
                       @csrf
-                      <input type="text" name="search" class="search" placeholder="Search...">
-                      <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                  </form>
+                        <input type="text" class="input" name="search" onmouseout="this.value = ''; this.blur();">
+                    </form>
                     <i class="fas fa-search"></i>
-                </div>
                 </div>
               </div>
             </div>
@@ -49,16 +47,12 @@
                   <br>
                   <br>
                   <div class="box">
-                    {{-- <form name="search">
-                        <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
-                    </form>
-                    <i class="fas fa-search"></i> --}}
-                    <form action="{{ route('search') }}" method="post">
+                    <form name="search" action="{{ route('search') }}" method="post">
                       @csrf
-                      <input type="text" name="search" class="search" placeholder="Search...">
-                      <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                  </form>
-                </div>
+                        <input type="text" class="input" name="search" onmouseout="this.value = ''; this.blur();">
+                    </form>
+                    <i class="fas fa-search"></i>
+                    
                 </div>
               </div>
             </div>
@@ -77,16 +71,11 @@
                     <br>
                     <br>
                     <div class="box">
-                        {{-- <form name="search">
-                            <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
-                        </form> --}}
-                        {{-- <i class="fas fa-search"></i> --}}
-                        <form action="{{ route('search') }}" method="post">
-                          @csrf
-                          <input type="text" name="search" class="search" placeholder="Search...">
-                          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                      <form name="search" action="{{ route('search') }}" method="post">
+                        @csrf
+                          <input type="text" class="input" name="search" onmouseout="this.value = ''; this.blur();">
                       </form>
-                    </div>
+                      <i class="fas fa-search"></i>
                   </div>
                 </div>
               </div>

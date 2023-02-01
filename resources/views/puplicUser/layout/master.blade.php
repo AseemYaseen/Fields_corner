@@ -7,7 +7,7 @@
     <title>Fields-Corner</title>
     <meta name="description" content="Free Bootstrap Theme by uicookies.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-
+    <link rel="shortcut icon" href="/img/Fields_Corner__6_-removebg-preview.png"type="image/l-icon type">
     @include('puplicUser.layout.head')
 </head>
 <body>
