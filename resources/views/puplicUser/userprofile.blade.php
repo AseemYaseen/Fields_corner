@@ -4,117 +4,6 @@ User Profile
 @endsection
 @section('css')
 {{-- <link rel="stylesheet" href="userSide/css/style.css"> --}}
-<style>
-  table {
-  border: 1px solid #ccc;
-  border-collapse: collapse;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  table-layout: fixed;
-}
-
-table caption {
-  font-size: 1.5em;
-  margin: .5em 0 .75em;
-}
-
-table tr {
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  padding: .35em;
-}
-
-table th,
-table td {
-  padding: .625em;
-  text-align: center;
-}
-
-table th {
-  font-size: .85em;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
-@media screen and (max-width: 600px) {
-  table {
-    border: 0;
-  }
-
-  table caption {
-    font-size: 1.3em;
-  }
-  
-  table thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-  
-  table tr {
-    border-bottom: 3px solid #ddd;
-    display: block;
-    margin-bottom: .625em;
-  }
-  
-  table td {
-    border-bottom: 1px solid #ddd;
-    display: block;
-    font-size: .8em;
-    text-align: right;
-  }
-  
-  table td::before {
-    /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  table td:last-child {
-    border-bottom: 0;
-  }
-}
-
-/* general styling */
-body {
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.25;
-}
-
-.Pending{
-  background-color: rgb(224, 194, 24);
-    display: inline-block;
-        color:rgb(255, 255, 255);
-        border-radius:10px;
-        padding:5px 10px;
-}
-.Approved{
-  background-color: rgb(0, 198, 0);
-    display: inline-block;
-        color:rgb(255, 255, 255);
-        border-radius:10px;
-        padding:5px 10px;
-}
-
-.Rejected{
-  background-color: rgb(198, 40, 0);
-    display: inline-block;
-        color:rgb(255, 255, 255);
-        border-radius:10px;
-        padding:5px 10px;
-}
-</style>
 
 @endsection
 
@@ -136,8 +25,9 @@ body {
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4>{{ Auth::user()->name}}</h4>
-                      <p class="text-muted font-size-sm">{{ Auth::user()->name}} Profile and reservations</p>
+                      <h4>John Doe</h4>
+                      <p class="text-secondary mb-1">Full Stack Developer</p>
+                      <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
                     </div>
                   </div>
                 </div>
@@ -151,7 +41,7 @@ body {
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{ Auth::user()->name}}
+                      Kenneth Valdez
                     </div>
                   </div>
                   <hr>
@@ -160,7 +50,7 @@ body {
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{ Auth::user()->email}}
+                      fip@jukmuh.al
                     </div>
                   </div>
                   <hr>
@@ -243,7 +133,7 @@ body {
               @endif
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-primary " target="__blank" href="{{route('profileEdit',Auth::user()->id)}}">Edit</a>
+                      <a class="btn btn-primary " target="__blank" href="{{route('profileEdit',Auth::user()->id)}}" >Edit</a>
                     </div>
                   </div>
                 </div>
@@ -252,5 +142,7 @@ body {
           </div>
         </div>
     </div>
+
+
 @endsection
 
