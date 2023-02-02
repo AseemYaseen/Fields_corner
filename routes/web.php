@@ -16,6 +16,7 @@ use App\Http\Controllers\UserSide\registerController;
 use App\Http\Controllers\UserSide\loginController;
 use App\Http\Controllers\UserSide\searchController;
 use App\Http\Controllers\UserSide\ProfileEditController;
+use App\Http\Controllers\UserSide\fieldsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -100,3 +101,5 @@ Route::get('singleItem',function(){
 });
 
 Route::post('search' , [searchController::class , 'search'])->name('search');
+Route::get('puplicUser.fields' , [fieldsController::class , 'index']);
+// Route::resource('/categories', CategoriesController::class);
