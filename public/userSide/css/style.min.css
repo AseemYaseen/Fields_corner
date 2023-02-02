@@ -1582,7 +1582,7 @@ a.hover-reverse:hover {
     height: 46px;
     -webkit-box-shadow: none;
     box-shadow: none;
-    font-size: 16px;
+    font-size: 20px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1682,7 +1682,7 @@ a.hover-reverse:hover {
     border: none;
     margin: 0;
     border-radius: 0;
-    color: rgba(255, 255, 255, .7)
+    color:#ffffff;
 }
 
 .flexslider .seperator {
@@ -1695,14 +1695,14 @@ a.hover-reverse:hover {
     color: rgb(255, 255, 255);
     font-weight: 300;
     font-size: 50px;
-    line-height: 225px;
-    font-family:fantasy;
+    line-height: 150px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .flexslider .probootstrap-sub-wrap {
     max-width: 700px;
     text-align: left;
-    font-size: 18px;
+    font-size: 25px;
     line-height: 1.5
 }
 
