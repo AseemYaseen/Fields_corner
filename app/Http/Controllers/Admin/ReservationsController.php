@@ -84,10 +84,10 @@ class ReservationsController extends Controller
     {
             $Statuss = Reservations::findorFail($id);
 
-            if ($Statuss->Status == 0){
-                $Statuss->Status = 1;
+            if ($Statuss->Status == 'pending'){ 
+                $Statuss->Status = 'Accepted'; 
             }else{
-                $Statuss->Status = 0;
+                $Statuss->Status = 'pending'; 
             }
             $Statuss->save();
             return redirect()->route('reservation.index');

@@ -35,4 +35,5 @@ class Playgrounds extends Model
         return $this->hasMany(Reservations::class);
     
     }
+
 }

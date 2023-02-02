@@ -126,7 +126,7 @@
                 $i=1
                 ?>
                 @foreach ($reservations as $reservation)
-                @if (!$reservation->Status)
+                @if ($reservation->Status == 'pending')
                 {{-- {{dd($reservation)}} --}}
               <tr>
                 <td>{{$i++}}</td>
@@ -208,7 +208,7 @@
                 $s=1
                 ?>
                  @foreach ($reservations as $reservation)
-                @if ($reservation->Status == 1)
+                @if ($reservation->Status == 'Accepted')
               <tr>
                 <td>{{$s++}}</td>
                 <td>{{$reservation->first_name}}</td>
@@ -232,7 +232,7 @@
               $s=1
               ?>
                @foreach ($reservations as $reservation)
-              @if ($reservation->Status == 2)
+              @if ($reservation->Status == 'rejected')
             <tr>
               <td>{{$s++}}</td>
               <td>{{$reservation->first_name}}</td>

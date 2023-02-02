@@ -29,4 +29,8 @@ class Reservations extends Model
         return $this->belongsTo(User::class,'user_id');
     
     }
+    // public function User(){
+    //     return $this->hasMany(User::class,);
+    
+    // }
 }

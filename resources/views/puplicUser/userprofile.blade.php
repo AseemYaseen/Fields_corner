@@ -4,6 +4,35 @@ User Profile
 @endsection
 @section('css')
 {{-- <link rel="stylesheet" href="userSide/css/style.css"> --}}
+<style>
+  .Pending{
+    background-color: rgb(218, 214, 0);
+    display: inline-block;
+    font-size: 14px;
+        color:rgb(255, 255, 255);
+        border-radius:10px;
+        padding:3px 6px;
+        margin: 2px;
+  }
+  .Rejected{
+    background-color: rgb(218, 58, 0);
+    display: inline-block;
+    font-size: 14px;
+        color:rgb(255, 255, 255);
+        border-radius:10px;
+        padding:3px 6px;
+        margin: 2px;
+  }
+  .Approved{
+    background-color: rgb(0, 183, 49);
+    display: inline-block;
+    font-size: 14px;
+        color:rgb(255, 255, 255);
+        border-radius:10px;
+        padding:3px 6px;
+        margin: 2px;
+  }
+</style>
 
 @endsection
 
@@ -41,7 +70,7 @@ User Profile
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Kenneth Valdez
+                      {{Auth::user()->name}}
                     </div>
                   </div>
                   <hr>
@@ -50,18 +79,19 @@ User Profile
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      fip@jukmuh.al
+                      {{Auth::user()->email}}
                     </div>
                   </div>
                   <hr>
-
                   <table>
                     <caption>Reservation Summary</caption>
                     {{-- {{dd($Users->Reservations)}} --}}
-                    @if ($Users->Reservations->Status == 1)
+              
+              
 
                     <thead>
-                      {{-- @foreach($Users->Reservations as $Reservations) --}}
+                      @foreach($Users->Reservations as $reservationData)
+                      @if ($reservationData['Status'] == 'Accepted')
                       <tr>
                         <th scope="col">First name</th>
                         <th scope="col">Last name</th>
@@ -69,68 +99,60 @@ User Profile
                         <th scope="col">Start Date</th>
                         <th scope="col">End Date</th>
                         <th scope="col">Status</th>
+                        <th scope="col">Edit</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td data-label="Account">{{$Users->Reservations->first_name}}</td>
-                        <td data-label="Due Date">{{$Users->Reservations->last_name}}</td>
-                        <td data-label="Amount">{{$Users->Reservations->phone_number}}</td>
-                        <td data-label="Period">{{$Users->Reservations->Start_date}}</td>
-                        <td data-label="Period">{{$Users->Reservations->End_date}}</td>
+                        <td data-label="Account">{{$reservationData->first_name}}</td>
+                        <td data-label="Due Date">{{$reservationData->last_name}}</td>
+                        <td data-label="Amount">{{$reservationData->phone_number}}</td>
+                        <td data-label="Period">{{$reservationData->Start_date}}</td>
+                        <td data-label="Period">{{$reservationData->End_date}}</td>
                         <td data-label="Period"><span class="Approved">Approved</span></td>
+                        <td><a href=" {{route('ReservstionEdit',$reservationData->id)}}" type="button" class="Editb">Edit</a></td>
+                        
+                        
                       </tr>
-                    </tbody>
-                  </table>
+                
+                  
                   @endif 
+                  @endforeach
 
-                  @if ($Users->Reservations->Status == 0)
-                  <thead>
+                    @foreach($Users->Reservations as $reservationData)
+                    @if ($reservationData['Status'] == 'pending')
                     <tr>
-                      <th scope="col">First name</th>
-                      <th scope="col">Last name</th>
-                      <th scope="col">Phone number</th>
-                      <th scope="col">Start Date</th>
-                      <th scope="col">End Date</th>
-                      <th scope="col">Status</th>
+                      <td >{{$reservationData->first_name}}</td>
+                      <td >{{$reservationData->last_name}}</td>
+                      <td >{{$reservationData->phone_number}}</td>
+                      <td >{{$reservationData->Start_date}}</td>
+                      <td >{{$reservationData->End_date}}</td>
+                      <td ><span class="Pending">Pending</span></td>
+                      <td><a href=" {{route('ReservstionEdit',$reservationData->id)}}" type="button" class="Editb">Edit</a></td>
+                      
                     </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td data-label="Account">{{$Users->Reservations->first_name}}</td>
-                      <td data-label="Due Date">{{$Users->Reservations->last_name}}</td>
-                      <td data-label="Amount">{{$Users->Reservations->phone_number}}</td>
-                      <td data-label="Period">{{$Users->Reservations->Start_date}}</td>
-                      <td data-label="Period">{{$Users->Reservations->End_date}}</td>
-                      <td data-label="Period"><span class="Pending">Pending</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-                @endif
-
-                @if ($Users->Reservations->Status == 2)
-                <thead>
+              
+                  @endif
+                  @endforeach
+                
+                
+               
+               
+                  @foreach($Users->Reservations as $reservationData)
+                  @if ($reservationData['Status'] == 'rejected')
                   <tr>
-                    <th scope="col">First name</th>
-                    <th scope="col">Last name</th>
-                    <th scope="col">Phone number</th>
-                    <th scope="col">Start Date</th>
-                    <th scope="col">End Date</th>
-                    <th scope="col">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td data-label="Account">{{$Users->Reservations->first_name}}</td>
-                    <td data-label="Due Date">{{$Users->Reservations->last_name}}</td>
-                    <td data-label="Amount">{{$Users->Reservations->phone_number}}</td>
-                    <td data-label="Period">{{$Users->Reservations->Start_date}}</td>
-                    <td data-label="Period">{{$Users->Reservations->End_date}}</td>
+                    <td data-label="Account">{{$reservationData->first_name}}</td>
+                    <td data-label="Due Date">{{$reservationData->last_name}}</td>
+                    <td data-label="Amount">{{$reservationData->phone_number}}</td>
+                    <td data-label="Period">{{$reservationData->Start_date}}</td>
+                    <td data-label="Period">{{$reservationData->End_date}}</td>
                     <td data-label="Period"><span class="Rejected">Rejected</span></td>
+                    <td><a href=" {{route('ReservstionEdit',$reservationData->id)}}" type="button" class="Editb">Edit</a></td>
                   </tr>
+                  @endif
+                  @endforeach
                 </tbody>
               </table>
-              @endif
                   <div class="row">
                     <div class="col-sm-12">
                       <a class="btn btn-primary " target="__blank" href="{{route('profileEdit',Auth::user()->id)}}" >Edit</a>
