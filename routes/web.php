@@ -16,6 +16,7 @@ use App\Http\Controllers\UserSide\registerController;
 use App\Http\Controllers\UserSide\loginController;
 use App\Http\Controllers\UserSide\searchController;
 use App\Http\Controllers\UserSide\ProfileEditController;
+use App\Http\Controllers\UserSide\fieldsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,7 +79,7 @@ Route::get('/UserProfile/{id}',[BookController::class,'profile'])->name('profile
 Route::get('/UserProfileEdit/{id}',[BookController::class,'profileEdit'])->name('profileEdit');
 Route::get('/UserProfileUpdate/{id}',[BookController::class,'profileUpdate'])->name('profileUpdate');
 Route::get('/UserReservationEdit/{id}',[BookController::class,'ReservstionEdit'])->name('ReservstionEdit');
-Route::get('/UserReservationUpdate/{id}',[BookController::class,'ReservstionUpdate'])->name('ReservstionUpdate');
+Route::get('/UserProfile/{id}',[BookController::class,'ReservstionUpdate'])->name('ReservstionUpdate');
 Route::get('/book/create/{id}',[BookController::class,'create'])->name('book.create');
 
 Route::resource('payments', 'PaymentsController', ['except' => 'create']);
@@ -101,3 +102,5 @@ Route::get('singleItem',function(){
 });
 
 Route::post('search' , [searchController::class , 'search'])->name('search');
+Route::get('puplicUser.fieldsItem' , [fieldsController::class , 'index'])->name('fieldsItem');
+// Route::resource('/categories', CategoriesController::class);

@@ -33,7 +33,7 @@
                     </form>
                     <i class="fas fa-search"></i>
                 </div>
-                <button class="btn btn-primary"><a href="{{url('publicUser.fields')}}" style="color: white">Explore</a></button>
+                <button class="btn btn-primary"><a href="{{route('fieldsItem')}}" style="color: white">Explore</a></button>
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@
                     </form>
             
                 </div>
-                <button class="btn btn-primary"><a href="{{url('publicUser.fields')}}" style="color: white">Explore</a></button>
+                <button class="btn btn-primary"><a href="{{route('fieldsItem')}}" style="color: white">Explore</a></button>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@
                       </form>
                       <i class="fas fa-search"></i>
                   </div>
-                  <button class="btn btn-primary"><a href="{{url('publicUser.fields')}}" style="color: white">Explore</a></button>
+                  <button class="btn btn-primary"><a href="{{route('fieldsItem')}}" style="color: white">Explore</a></button>
                 </div>
               </div>
             </div>
