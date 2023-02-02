@@ -63,7 +63,7 @@
               </div>
             </div>
           </div>
-  
+
 
         </li>
         <li style="background-image: url(img/slider_3.jpg);" class="overlay">
@@ -108,11 +108,11 @@
           </div>
         </div>
 
-        
+
         <div class="row">
           <div class="col-md-12 probootstrap-relative">
             <div class="owl-carousel owl-carousel-carousel">
-              
+
               {{-- {{$data=isset($categories)?$categories:[]}} --}}
               @foreach ($categories as $categorie)
               <div class="item">
@@ -146,14 +146,14 @@
                   </div>
                  </div> --}}
                 @endforeach
-              </div> 
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
-    
+
+
 
   <section class="probootstrap-section probootstrap-section-dark">
     <div class="container">
