@@ -73,14 +73,23 @@ class BookController extends Controller
 
 
 }
+    public function ReservstionEdit(Request $request,$id){
+
+
+        $ReservationE = Reservations::findorFail($id);
+        //    return view('puplicUser.userReservationEdit',compact('ReservationE'));
+           return view('puplicUser.userReservationEdit', compact('ReservationE'));
+           
+    }
+
 
     public function ReservstionUpdate(Request $request,$id){
 
         // $reservation = Reservations::where('id', $id)->get();
         $reservation =  Reservations::findorFail($id);
-        $reservation->Status ='0';
-        $reservation->save();
         $reservation->update($request->all());
+        $reservation->Status ='pending';
+        $reservation->save();
         $ids= auth()->user()->id;
         return redirect()->route('profile',$ids);
 

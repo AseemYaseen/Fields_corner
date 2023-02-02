@@ -14,7 +14,6 @@
 
 {{--============= contant ===============--}}
 @section('contant')
-
 <section class="probootstrap-slider flexslider probootstrap-inner">
     <ul class="slides">
        <li style="background-image: url(/img/contactus.jpg);" class="overlay">
