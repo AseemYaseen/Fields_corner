@@ -28,7 +28,7 @@ User Profile
           {{-- @foreach ($ReservationE as $Reservation) --}}
           
           <h2 class="mt0">Reservation Edit num{{$i++}}</h2>
-          <form action="{{route('ReservstionUpdate',Auth::user()->id)}}" method="post" class="probootstrap-form">
+          <form action="{{route('ReservstionUpdate',$ReservationE->id)}}" method="post" class="probootstrap-form">
             @method('GET')
             @csrf
             <div class="row">

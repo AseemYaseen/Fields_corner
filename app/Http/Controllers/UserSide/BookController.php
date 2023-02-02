@@ -92,7 +92,8 @@ class BookController extends Controller
         $reservation->save();
         $ids= auth()->user()->id;
         // return redirect()->route('profile',$ids);
-        return view('puplicUser.userprofile', compact('ids'));
+        // return view('puplicUser.userprofile', compact('ids'));
+        return redirect()->route('profile',$ids);
 
 
 

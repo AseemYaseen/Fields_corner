@@ -79,7 +79,7 @@ Route::get('/UserProfile/{id}',[BookController::class,'profile'])->name('profile
 Route::get('/UserProfileEdit/{id}',[BookController::class,'profileEdit'])->name('profileEdit');
 Route::get('/UserProfileUpdate/{id}',[BookController::class,'profileUpdate'])->name('profileUpdate');
 Route::get('/UserReservationEdit/{id}',[BookController::class,'ReservstionEdit'])->name('ReservstionEdit');
-Route::get('/UserProfile/{id}',[BookController::class,'ReservstionUpdate'])->name('ReservstionUpdate');
+Route::get('/UserReservationUpdate/{id}',[BookController::class,'ReservstionUpdate'])->name('ReservstionUpdate');
 Route::get('/book/create/{id}',[BookController::class,'create'])->name('book.create');
 
 Route::resource('payments', 'PaymentsController', ['except' => 'create']);
