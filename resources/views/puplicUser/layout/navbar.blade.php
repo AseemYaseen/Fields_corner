@@ -22,13 +22,9 @@
   <nav class="navbar">
       <a href="{{ route('puplicUser.welcome') }}">Home</a>
       <a href="{{ url('/about') }}">About</a>
-      {{-- <a href="{{ route('fields.index')}}">Fields</a> --}}
       <a href="{{ url('/contact') }}">Contact</a>
   </nav>
 
-  {{-- <div class="icons"> --}}
-      {{-- <i class="fas fa-search" id="search-btn"></i> --}}
-      {{-- <i class="fas fa-user" id="login-btn"></i> --}}
       <div class="nav-item dropdown" style="color:#2F70AF;
       font-size: 2rem;
       margin:0 .8rem;
