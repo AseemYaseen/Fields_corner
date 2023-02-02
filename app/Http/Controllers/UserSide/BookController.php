@@ -91,7 +91,8 @@ class BookController extends Controller
         $reservation->Status ='pending';
         $reservation->save();
         $ids= auth()->user()->id;
-        return redirect()->route('profile',$ids);
+        // return redirect()->route('profile',$ids);
+        return view('puplicUser.userprofile', compact('ids'));
 
 
 
