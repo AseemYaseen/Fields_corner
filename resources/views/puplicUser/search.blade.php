@@ -16,7 +16,7 @@
 @section('contant')
 
 <div class="container">
-    <div class="row">
+    <div class="row" style="margin-top: 14rem">
 
    @foreach ($results as $Playground)
        

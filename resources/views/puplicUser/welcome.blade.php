@@ -33,6 +33,7 @@
                     </form>
                     <i class="fas fa-search"></i>
                 </div>
+                <button class="btn btn-primary"><a href="{{url('publicUser.fields')}}" style="color: white">Explore</a></button>
               </div>
             </div>
           </div>
@@ -50,22 +51,20 @@
                     <form name="search" action="{{ route('search') }}" method="post">
                       @csrf
                         <input type="text" class="input" name="search" onmouseout="this.value = ''; this.blur();">
-                    </form>
                     <i class="fas fa-search"></i>
-                    
+                    </form>
+            
                 </div>
+                <button class="btn btn-primary"><a href="{{url('publicUser.fields')}}" style="color: white">Explore</a></button>
               </div>
             </div>
           </div>
-  
-
         </li>
         <li style="background-image: url(img/slider_3.jpg);" class="overlay">
             <div class="container">
               <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                   <div class="probootstrap-slider-text text-center">
-                    {{-- <p><img src="img/curve_white.svg" class="seperator probootstrap-animate" alt="Free HTML5 Bootstrap Template"></p> --}}
                     <h1 class="probootstrap-heading probootstrap-animate">Enjoy Luxury Experience</h1>
                     <div class="probootstrap-animate probootstrap-sub-wrap">Where To Experience Swimming In The Aqaba</div>
                     <br>
@@ -77,6 +76,7 @@
                       </form>
                       <i class="fas fa-search"></i>
                   </div>
+                  <button class="btn btn-primary"><a href="{{url('publicUser.fields')}}" style="color: white">Explore</a></button>
                 </div>
               </div>
             </div>
