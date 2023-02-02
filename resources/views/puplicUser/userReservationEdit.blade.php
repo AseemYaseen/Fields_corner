@@ -24,9 +24,9 @@ User Profile
           <?php
           $i = 1;
           ?>
-          
+          {{dd($ReservationE)}}
           @foreach ($ReservationE as $Reservation)
-          {{dd($Reservation)}}
+          
           <h2 class="mt0">Reservation Edit num{{$i++}}</h2>
           <form action="{{route('ReservstionEdit',Auth::user()->id)}}" method="post" class="probootstrap-form">
             @method('GET')

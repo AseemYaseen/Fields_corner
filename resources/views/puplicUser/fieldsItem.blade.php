@@ -36,7 +36,7 @@
 <section class="probootstrap-section">
   <div class="container">
     <div class="row">
-      @foreach($Playgrounds as $Playground)
+      @foreach($playgrounds as $Playground)
       <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="probootstrap-room">
               {{-- <img src="{{URL::asset("storage/image/$Playground->image")}} --}}

@@ -16,7 +16,7 @@ class fieldsController extends Controller
     {
         //
         $playgrounds= Playgrounds::all();
-        return view('puplicUser.fields', compact('playgrounds'));
+        return view('puplicUser.fieldsItem', compact('playgrounds'));
         
     }
 

@@ -102,5 +102,5 @@ Route::get('singleItem',function(){
 });
 
 Route::post('search' , [searchController::class , 'search'])->name('search');
-Route::get('puplicUser.fields' , [fieldsController::class , 'index']);
+Route::get('puplicUser.fieldsItem' , [fieldsController::class , 'index'])->name('fieldsItem');
 // Route::resource('/categories', CategoriesController::class);
