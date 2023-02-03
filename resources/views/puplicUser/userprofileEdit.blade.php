@@ -59,15 +59,16 @@ User Profile
                         </div>
                         <br>
                         <button type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Submit">Submit</button>
-                    </form>
+                    </div>
+                </div>
+            </div>
+            </form>
 
-
-        </div>
-        </div>
-        </div>
+         </div>
     </div>
+</div>
     
-</section>
+
 
 
 @endsection
